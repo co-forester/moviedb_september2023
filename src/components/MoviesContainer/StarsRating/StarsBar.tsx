@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () => {
+const StarsBar = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
 
-export {App};
+export {StarsBar};

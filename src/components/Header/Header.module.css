@@ -1,0 +1,51 @@
+.HeaderLight{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7f7fa8;
+    height: 50px;
+}
+.HeaderLight a{
+    text-decoration: none;
+    color: snow;
+    font-size: 25px;
+}
+.HeaderLight a:hover{
+    text-decoration: underline;
+    color: coral;
+    font-size: 28px;
+}
+.HeaderLight a:active{
+    color: #8ceff8;
+}
+.HeaderDark{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #41419b;
+    height: 50px;
+}
+.HeaderDark a{
+    text-decoration: none;
+    color: #838181;
+    font-size: 25px;
+}
+.HeaderDark a:hover{
+    text-decoration: underline;
+    color: coral;
+    font-size: 28px;
+}
+.HeaderDark a:active{
+    color: #013034;
+}
+/*.ButThemeLight{*/
+/*    box-decoration-break: slice;*/
+/*    text-decoration: none;*/
+/*    color: #3458c7;*/
+/*}*/
+/*.ButThemeDark{*/
+/*    box-decoration-break: slice;*/
+/*    text-decoration: none;*/
+/*}*/
+
+

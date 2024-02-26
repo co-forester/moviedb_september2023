@@ -1,0 +1,24 @@
+
+.MoviesDark{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 21px;
+    width: calc(19% - 4px);
+    color: #4a4ef6;
+}
+.Movies:hover{
+    cursor: pointer;
+    background-color: #c4c0c0;
+}
+.MoviesPoster img{
+    width: 100%;
+}
+.MoviesLight{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 21px;
+    width: calc(19% - 4px);
+    color: #f1f599;
+}
