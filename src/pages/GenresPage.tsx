@@ -11,7 +11,7 @@ interface IProps extends PropsWithChildren{
 const GenresPage: FC<IProps>= ({movies}) => {
     const [value, setValue] = useState('');
 
-    const filteredmovie = movies.filter(movie =>{ return movie.title.toLowerCase().includes(value.toLowerCase())});
+    const filteredMovie = movies.filter(movie =>{ return movie.title.toLowerCase().includes(value.toLowerCase())});
 
 
     return (
@@ -23,7 +23,7 @@ const GenresPage: FC<IProps>= ({movies}) => {
                 </form>
             </div>
             <div>
-                {filteredmovie.map(movie => <Movies movie={movie} key={movie.id}/>)}
+                {filteredMovie.map(movie => <Movies movie={movie} key={movie.id}/>)}
             </div>
         </div>
 

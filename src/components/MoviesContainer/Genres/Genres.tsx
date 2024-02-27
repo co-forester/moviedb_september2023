@@ -5,7 +5,7 @@ import {Genre} from "./Genre";
 import {IGenre} from "../../../interfaces";
 
 const Genres = () => {
-    const [genres, setGenres] = useState([])
+    const [genres, setGenres] = useState<IGenre[]>([])
 
     useEffect(() => {
         genreService.getAll().then(({data}) => setGenres(data))

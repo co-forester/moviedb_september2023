@@ -7,7 +7,7 @@ interface IProps extends PropsWithChildren{
     poster: object
 }
 
-const Context = createContext(null)
+const Context:any = createContext(null)
 
 const ContextProvider: FC<IProps> = ({children}) => {
     // const [trigger, setTrigger] = useState(null);
