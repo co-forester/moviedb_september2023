@@ -2,14 +2,13 @@ import React from 'react';
 
 import css from './Header.module.css'
 import {NavLink, useNavigate} from "react-router-dom";
-import {useAppContext} from "../../hooks";
-// import {useAppContext} from "../../hooks";
+import {useAppSwitcherContext} from "../../hooks";
 
 
 const Header = () => {
 
     const navigate = useNavigate();
-    const {switcher, changeSwitcher} = useAppContext();
+    const {switcher, changeSwitcher} = useAppSwitcherContext();
 
     const back = () => {
         navigate(-1)

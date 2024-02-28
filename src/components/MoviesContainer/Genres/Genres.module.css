@@ -1,0 +1,12 @@
+.GenresMap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Genres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+.Pagination{
+    display: flex;
+}

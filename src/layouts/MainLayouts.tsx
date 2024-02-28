@@ -1,17 +1,17 @@
 import React from 'react';
 import {Outlet} from "react-router-dom";
 
-
 import css from './MainLayout.module.css'
-import {Header} from "../components";
-import {useAppContext} from "../hooks";
+import {Header, Pagination} from "../components";
+import {useAppSwitcherContext} from "../hooks";
 
 const MainLayouts = () => {
-    const {switcher} = useAppContext();
+    const {switcher} = useAppSwitcherContext();
 
     return (
         <div className={switcher ? css.MainLayoutLight : css.MainLayoutDark}>
             <Header/>
+            <Pagination/>
             <Outlet/>
         </div>
     );

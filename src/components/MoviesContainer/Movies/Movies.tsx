@@ -3,17 +3,20 @@ import {useNavigate} from "react-router-dom";
 
 import {IMovie} from "../../../interfaces";
 import css from './Movies.module.css'
-import {useAppContext} from "../../../hooks";
+import {useAppContext, useAppPosterContext, useAppSwitcherContext} from "../../../hooks";
 import {posterURL} from "../../../constants";
 
 interface IProps extends PropsWithChildren{
-    movie : IMovie
+    movie : IMovie;
+
 }
 
 const Movies: FC<IProps>= ({movie}) => {
      const {poster_path, title, original_title }= movie;
      const navigate = useNavigate();
-     const {setCard, switcher, setPoster} = useAppContext();
+     const {switcher} = useAppSwitcherContext();
+     const {setCard} = useAppContext();
+     // const {setPoster} = useAppPosterContext();
 
      const toMoviesListCard = () => {
          setCard({movie});

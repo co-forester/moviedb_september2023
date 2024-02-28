@@ -1,0 +1,8 @@
+.ButGenre{
+    display: flex;
+    background: darkseagreen;
+    margin: 3px;
+    padding: 3px 6px 3px 6px;
+    border-left-bradius: 40%;
+    border-right-radius: 40%;
+}

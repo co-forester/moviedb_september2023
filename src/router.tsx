@@ -12,9 +12,9 @@ const router = createBrowserRouter([
             {index: true, element: <Navigate to={'home'}/>},
             {path: 'home', element: <HomePage/>},
             {path: 'moviesList', element: <MoviesPage/>},
-            {path: 'moviesCard', element: <MoviesCardPage/>},
-            {path: 'genres', element: <GenresPage/>},
-            {path: 'movieInfo', element: <MovieInfo/>}
+            {path: 'genres', element: <Genres/>},
+            // {path: 'moviesCard', element: <MoviesCardPage/>},
+            // {path: 'movieInfo', element: <MovieInfo/>}
         ]
     }
 ])

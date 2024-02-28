@@ -6,7 +6,6 @@ import './index.css';
 import {router} from "./router";
 import {ContextProvider} from "./hoc";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
