@@ -3,14 +3,14 @@
     background: #504a84;
     margin: 3px;
     padding: 3px 6px 3px 6px;
-    border-radius: 40%;
+    border-radius: 6px;
 }
 .ButGenreLight{
     display: flex;
     background: #6860a9;
     margin: 3px;
     padding: 3px 6px 3px 6px;
-    border-radius: 40%;
+    border-radius: 6px;
 
 }
 .ButGenreLight:hover{
