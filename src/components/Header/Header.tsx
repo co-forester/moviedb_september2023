@@ -21,8 +21,8 @@ const Header = () => {
     return (
         <div className={switcher ? css.HeaderLight : css.HeaderDark}>
             <button onClick={back}>back</button>
-            <NavLink to={'moviesList'}>Movies</NavLink>
-            <NavLink to={'genres'}>Genres</NavLink>
+            <NavLink to={'moviesPage/movies'}>Movies</NavLink>
+            <NavLink to={'moviesPage/genres'}>Genres</NavLink>
             <button onClick={switchers}>Theme</button>
         </div>
     );

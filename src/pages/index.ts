@@ -1,4 +1,3 @@
-export * from './MoviesPage'
-export * from './MoviesCardPage'
-export * from './GenresPage'
-
+export * from './MoviesPage';
+export * from './GenresPage';
+export  * from  './ErrorPage'

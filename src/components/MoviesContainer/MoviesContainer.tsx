@@ -38,7 +38,7 @@ const MoviesContainer = () => {
         <div className={css.MoviesContainer}>
             <div className={css.Pagination}>
                 <button className={css.ButPrev} disabled={(list === 1)} onClick={prev}>prev</button>
-                <div>{list}</div>
+                <div>current {list}</div>
                 <button className={css.ButNext} disabled={list === 500} onClick={next}>next</button>
             </div>
             <MoviesList movies={movies}/>

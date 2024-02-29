@@ -11,6 +11,7 @@ const Genres = () => {
     const [genres, setGenres] = useState<IGenre[]>([]);
     const [movies, setMovies] = useState<IMovie[]>([]);
     const [page, setPage] = useState<number>(1);
+    const [total_pages, setTotal_pages] = useState<number>(null);
     const {genreId} = useAppPrevNextContext();
 
     useEffect(() => {
@@ -18,9 +19,11 @@ const Genres = () => {
     }, []);
 
     useEffect(() => {
-    movieService.getAllByGenre(genreId, page).then(({data:{page, results}}) => {
+    movieService.getAllByGenre(genreId, page).then(({data:{total_pages, page, results}}) => {
         setMovies(results);
-        setPage(page)
+        setPage(page);
+        setTotal_pages(total_pages)
+
     })
     }, [page, genreId]);
 
@@ -35,12 +38,13 @@ const Genres = () => {
     return (
         <div className={css.Genres}>
             <div className={css.GenresMap}>
-                {genres.map(genre => <Genre genre={genre}/>)}
+                {genres.map(genre => <Genre  key={genre.id} genre={genre}/>)}
             </div>
             <div className={css.Pagination}>
-                <button className={css.ButPrev} disabled={(page === 1)} onClick={prev}>prev</button>
-                <div>{page}</div>
-                <button className={css.ButNext} disabled={page === movies.length} onClick={next}>next</button>
+                <button className={css.ButPrev} disabled={(page === total_pages)} onClick={prev}>prev</button>
+                <div>current {page}</div>
+                <button className={css.ButNext} disabled={page === 4000} onClick={next}>next</button>
+                <div>total {total_pages}</div>
             </div>
             <MoviesList movies={movies}/>
         </div>

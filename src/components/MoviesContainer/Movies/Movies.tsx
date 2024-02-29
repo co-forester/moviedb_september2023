@@ -16,12 +16,13 @@ const Movies: FC<IProps>= ({movie}) => {
      const navigate = useNavigate();
      const {switcher} = useAppSwitcherContext();
      const {setCard} = useAppContext();
-     // const {setPoster} = useAppPosterContext();
+     const {setPoster} = useAppPosterContext();
+
 
      const toMoviesListCard = () => {
          setCard({movie});
-         // setPoster({poster});
-         navigate('/moviesCard')
+         setPoster({poster});
+         navigate('/moviesCard/:{state:move}')
      }
     const poster = `${posterURL}/${poster_path}/&api_key=d031e7f38834f2d640ae4a98140c550f`;
 

@@ -9,4 +9,9 @@
  }
 .Pagination{
     display: flex;
+    justify-content: center;
+    margin: 13px 0 4px 0;
+}
+.ButPrev, .ButNext{
+    margin: 0 8px 0 8px;
 }
