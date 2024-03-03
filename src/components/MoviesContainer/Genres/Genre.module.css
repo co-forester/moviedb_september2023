@@ -1,5 +1,6 @@
 .ButGenreDark{
     display: flex;
+    color: #f1f599;
     background: #585575;
     margin: 3px;
     padding: 3px 6px 3px 6px;
@@ -11,21 +12,19 @@
     margin: 3px;
     padding: 3px 6px 3px 6px;
     border-radius: 6px;
-
 }
 .ButGenreLight:hover{
     cursor: pointer;
-    background-color: #807e7e;
+    background-color: #a6a5a5;
 }
 .ButGenreDark[class='active']{
     cursor: pointer;
-    background-color: #5f5e5e;
+    background-color: #6f6f6f;
 }
 .ButGenreLight[class='active']{
 
     background-color: #665478;
 }
 .ButGenreDark:active{
-
     background-color: #9c9b9b;
 }

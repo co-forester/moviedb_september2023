@@ -29,7 +29,7 @@ const GenresPage: FC<IProps>= ({movies}) => {
                     {filteredMovie.map(movie => <Movies movie={movie} key={movie.id}/>)}
                 </div>
             </div>
-            <Genres/>
+            {/*<Genres/>*/}
         </div>
 
     );

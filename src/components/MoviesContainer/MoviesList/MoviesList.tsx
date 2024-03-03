@@ -4,7 +4,6 @@ import {Movies} from "../Movies";
 import {IMovie} from "../../../interfaces";
 import css from './Movieslist.module.css'
 
-
 interface IProps extends PropsWithChildren{
     movies: IMovie[]
 }
@@ -17,7 +16,6 @@ const MoviesList: FC<IProps>= ({movies}) => {
                 {movies.map(movie => <Movies key={movie.id} movie={movie}/>)}
             </div>
         </div>
-
     );
 };
 

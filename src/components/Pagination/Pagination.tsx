@@ -1,19 +1,30 @@
 import React from 'react';
 
-import css from './Pagination.module.css'
+import css from './Pagination.module.css';
 import {useAppPrevNextContext} from "../../hooks/useAppPrevNextContext";
 
 const Pagination = () => {
-//     const {setPrev, next, list} = useAppPrevNextContext();
+    const {page, setPage, total_pages} = useAppPrevNextContext();
 
-     // const prevF = () => { prev () }
-     // const nextF = () => { next () }
+    const prev = () => {
+        setPage(page-1)
+    };
+    const next = () => {
+        setPage(page+1)
+    };
 
     return (
         <div className={css.Pagination}>
-            {/*<button className={css.ButPrev} disabled={(list === 1)} onClick={setPrev}>prev</button>*/}
-            {/*<div>{list}</div>*/}
-            {/*<button className={css.ButNext} disabled={list === 500} onClick={next}>next</button>*/}
+            {/*<form>*/}
+            {/*    <input type={'number'} className={css.Input} placeholder={'enter page number'}*/}
+            {/*           onChange={(event) => setPage(event.target.value)}*/}
+            {/*    />*/}
+            {/*    <button className={css.ButPage}>go page</button>*/}
+            {/*</form>*/}
+            <button className={css.ButPrev} disabled={(page === 1)} onClick={prev}>prev</button>
+            <div>current {page}</div>
+            <button className={css.ButNext} disabled={page === total_pages} onClick={next}>next</button>
+            <div>total {total_pages}</div>
         </div>
     );
 };

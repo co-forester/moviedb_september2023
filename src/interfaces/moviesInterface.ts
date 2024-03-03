@@ -1,4 +1,6 @@
 export interface IMovies {
     page: number;
-    results: []
+    results: [];
+    total_pages: number;
+    total_results: number
 }

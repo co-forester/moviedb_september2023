@@ -10,7 +10,9 @@ interface IProps extends PropsWithChildren{
 
 const PosterPreview: FC<IProps>=  ({movie}) => {
 
-    const { title, poster_path} = movie
+    const { title, poster_path} = movie;
+    console.log(movie)
+    console.log(poster_path)
 
     const poster = `${posterURL}/${poster_path}/&api_key=d031e7f38834f2d640ae4a98140c550f`;
 

@@ -6,9 +6,9 @@ import {IMovies} from "../interfaces";
 import {IMoviesGenre} from "../interfaces/moviesGenreInterface";
 
 const  movieService = {
-    getAll: (page: string ='page'): IRes<IMovies> => apiService.get(urls.movies.base, {params:{page}}),
-    getAllByGenre: (genreIds: number, page: number): IRes<IMoviesGenre> => apiService.get(urls.movies.byGenreId(genreIds, page)),
-    getKeyWord: (keyWord: string): IRes<IMoviesGenre> => apiService.get(urls.search.byKeyWord(keyWord))
+    getAll: (page = 1): IRes<IMovies> => apiService.get(urls.movies.baseByPage(page)),
+    getAllByGenre: (genreIds: number, page=1): IRes<IMoviesGenre> => apiService.get(urls.movies.byGenreId(genreIds, page)),
+    getKeyWord: (keyWord: string, page= 1): IRes<IMovies> => apiService.get(urls.search.byKeyWord(keyWord, page))
 }
 
 export {movieService}

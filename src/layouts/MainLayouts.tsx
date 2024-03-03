@@ -11,7 +11,7 @@ const MainLayouts = () => {
     return (
         <div className={switcher ? css.MainLayoutLight : css.MainLayoutDark}>
             <Header/>
-            <Pagination/>
+            {/*<Pagination/>*/}
             <Outlet/>
         </div>
     );

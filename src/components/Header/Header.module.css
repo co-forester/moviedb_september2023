@@ -7,15 +7,16 @@
 }
 .HeaderLight a{
     text-decoration: none;
-    color: snow;
+    color: #f9e505;
     font-size: 25px;
 }
 .HeaderLight a:hover{
     text-decoration: underline;
-    color: coral;
+    color: #f75050;
     font-size: 28px;
 }
 .HeaderLight a:active{
+    text-decoration: none;
     color: #8ceff8;
 }
 .HeaderDark{
@@ -27,25 +28,25 @@
 }
 .HeaderDark a{
     text-decoration: none;
-    color: #838181;
+    color: #f8f85c;
     font-size: 25px;
 }
 .HeaderDark a:hover{
-    text-decoration: underline;
-    color: coral;
+    text-decoration: none;
+    color: #fc6161;
     font-size: 28px;
 }
 .HeaderDark a:active{
+    text-decoration: none;
     color: #013034;
 }
-/*.ButThemeLight{*/
-/*    box-decoration-break: slice;*/
-/*    text-decoration: none;*/
-/*    color: #3458c7;*/
-/*}*/
-/*.ButThemeDark{*/
-/*    box-decoration-break: slice;*/
-/*    text-decoration: none;*/
-/*}*/
+.ButtonBox{
+    padding-left: 300px;
+}
+.Button{
+    border-radius: 10px;
+    box-shadow: #353434 4px 4px 4px;
+    background-color: #f7f7b2;
+}
 
 

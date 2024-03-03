@@ -20,7 +20,7 @@ const Genre: FC<IProps> = ({genre}) => {
 
     return (
         <div className={css.Genre}>
-            <div className={switcher? css.ButGenreLight : css.ButGenreDark} onClick={byGenre}>name: {name}</div>
+            <div className={switcher? css.ButGenreLight : css.ButGenreDark} onClick={byGenre}>{name}</div>
         </div>
     );
 };
