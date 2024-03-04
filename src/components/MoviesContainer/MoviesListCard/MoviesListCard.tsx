@@ -11,11 +11,7 @@ const MoviesListCard = () => {
     const {card:{movie}} = useAppContext();
     const {original_title, overview, release_date, title, vote_average, genre_ids}= movie;
     const {gen} = useAppContext();
-
     const genresMovie: string[] = (gen.filter((item: IGenre)=> genre_ids.includes(item.id)).map((item: IGenre )=> item.name)).join();
-
-    console.log(genresMovie);
-
     const vote: number =vote_average / 2;
 
     return (
