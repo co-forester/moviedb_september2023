@@ -4,78 +4,17 @@ import {Badge, Rating, Typography} from "@mui/material";
 import css from "./MoviesListCard.module.css";
 import {useAppContext} from "../../../hooks";
 import {PosterPreview} from "../../PosterPreview";
+import {IGenre} from "../../../interfaces";
+
 
 const MoviesListCard = () => {
     const {card:{movie}} = useAppContext();
     const {original_title, overview, release_date, title, vote_average, genre_ids}= movie;
     const {gen} = useAppContext();
-    console.log(gen)
-    console.log({movie});
-    const genresMovie = genre_ids.join();
-        genre_ids.forEach( () =>{
-    //     switch (genre_ids.id) {
-    //     case 28 :
-    //         genresMovie.unshift('Action');
-    //         break;
-    //     case 12:
-    //         genresMovie.unshift('Adventure');
-    //         break;
-    //     case 16:
-    //         genresMovie.unshift('Animation');
-    //         break;
-    //     case 35 :
-    //         genresMovie.unshift('Comedy');
-    //         break;
-    //     case 80:
-    //         genresMovie.unshift('Crime');
-    //         break;
-    //     case 99:
-    //         genresMovie.unshift('Documentary');
-    //         break;
-    //     case 18:
-    //         genresMovie.unshift('Drama');
-    //         break;
-    //     case 10751:
-    //         genresMovie.unshift('Family');
-    //         break;
-    //     case 14:
-    //         genresMovie.unshift('Fantasy');
-    //         break;
-    //     case 36:
-    //         genresMovie.unshift('History');
-    //         break;
-    //     case 27:
-    //         genresMovie.unshift('Horror');
-    //         break;
-    //     case 10402:
-    //         genresMovie.unshift('Music');
-    //         break;
-    //     case 9648 :
-    //         genresMovie.unshift('Mystery');
-    //         break;
-    //     case 10749 :
-    //         genresMovie.unshift('Romance');
-    //         break;
-    //     case 878 :
-    //         genresMovie.unshift('Science Fiction');
-    //         break;
-    //     case 10770 :
-    //         genresMovie.unshift('TV Movie');
-    //         break;
-    //     case 53 :
-    //         genresMovie.unshift('Thriller');
-    //         break;
-    //     case 10752 :
-    //         genresMovie.unshift('War');
-    //         break;
-    //     case 37 :
-    //         genresMovie.unshift('Western');
-    //         break;
-    //     default:
-    //         genresMovie.unshift('genre another');
-    // }
-        });
 
+    const genresMovie: string[] = (gen.filter((item: IGenre)=> genre_ids.includes(item.id)).map((item: IGenre )=> item.name)).join();
+
+    console.log(genresMovie);
 
     const vote: number =vote_average / 2;
 
@@ -83,7 +22,7 @@ const MoviesListCard = () => {
         <div className={css.MoviesListCard}>
             <div className={css.Card}>
                 <div className={css.Img}>
-                    <Badge badgeContent={genresMovie} color="primary">
+                    <Badge className={css.Badge} badgeContent={genresMovie} color="primary">
                         <PosterPreview movie={movie}/>
                     </Badge>
                 </div>

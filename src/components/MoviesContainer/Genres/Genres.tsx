@@ -8,16 +8,18 @@ import {Genre} from "./Genre";
 import {useAppPrevNextContext} from "../../../hooks/useAppPrevNextContext";
 import {Pagination} from "../../Pagination";
 import '@fontsource/roboto/400.css';
+import {useAppContext} from "../../../hooks";
 
 const Genres = () => {
     const [genres, setGenres] = useState<IGenre[]>([]);
     const [movies, setMovies] = useState<IMovie[]>([]);
-    // const [page, setPage] = useState<number>(1);
+    const {setGen} = useAppContext();
     const {genreId, page, setPage, setTotal_pages} = useAppPrevNextContext();
 
     useEffect(() => {
         genreService.getAll().then(({data:{genres}})=> {
             setGenres(genres);
+            setGen(genres)
         })
     }, []);
 

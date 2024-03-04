@@ -16,14 +16,11 @@ const ContextProvider: FC<IProps> = ({children}) => {
     const [card, setCard] = useState<IMovie>(null);
     const [switcher, setSwitcher] = useState<boolean>(true );
     const [poster, setPoster] = useState<object>(null);
-    const [prev, setPrev] = useState<number>(null);
-    const [next, setNext] = useState<number>(null);
-    const [list, setList] = useState<number>(1);
     const [movies, setMovies] =useState<IMovie[]>([]);
     const [genreId, setGenreId] = useState<number>(null);
-    const [gen, setGen] = useState<IGenre[]>([]);
     const [page, setPage] = useState<number>(1);
     const [total_pages, setTotal_pages] = useState<number>(null);
+    const [gen, setGen] = useState<IGenre[]>([]);
     const changeSwitcher = () => {
         setSwitcher(prev => !prev)
     };
@@ -31,7 +28,7 @@ const ContextProvider: FC<IProps> = ({children}) => {
     return (
         <div>
             <ContextMovies.Provider value={{movies, setMovies}}>
-                <ContextPrevNext.Provider value={{prev, next, setNext, setPrev, list, setList, genreId, setGenreId, page, setPage, total_pages, setTotal_pages}}>
+                <ContextPrevNext.Provider value={{ genreId, setGenreId, page, setPage, total_pages, setTotal_pages}}>
                     <Context.Provider value = {{card, setCard, gen, setGen}}>
                         <ContextSwitcher.Provider  value = {{switcher, setSwitcher, changeSwitcher}}>
                             <ContextPoster.Provider  value = {{poster, setPoster}}>

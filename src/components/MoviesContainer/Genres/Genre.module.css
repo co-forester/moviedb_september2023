@@ -2,6 +2,7 @@
     display: flex;
     color: #f1f599;
     background: #585575;
+    box-shadow: #6969c2 5px 5px 5px ;
     margin: 3px;
     padding: 3px 6px 3px 6px;
     border-radius: 6px;
@@ -9,6 +10,7 @@
 .ButGenreLight{
     display: flex;
     background: #908bbb;
+    box-shadow: #41419b 3px 3px 3px ;
     margin: 3px;
     padding: 3px 6px 3px 6px;
     border-radius: 6px;
